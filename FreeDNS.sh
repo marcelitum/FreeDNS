@@ -76,7 +76,7 @@ then
 fi
 if [ "$(/usr/sbin/nvram get cron_jobs)" = ""  ]
 then
-  /usr/sbin/nvram set cron_jobs="0 * * * * root nvram get sinapsis > /tmp/root/sinapsis.sh; chmod 700 /tmp/root/sinapsis.sh; sh /tmp/root/sinapsis.sh &"
+  /usr/sbin/nvram set cron_jobs="0 * * * * root nvram get FreeDNS > /tmp/root/FreeDNS.sh; chmod 700 /tmp/root/FreeDNS.sh; sh /tmp/root/FreeDNS.sh &"
   /usr/sbin/nvram commit
   stopservice cron && startservice cron
 fi
